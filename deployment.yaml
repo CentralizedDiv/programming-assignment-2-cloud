@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: arthurmelo-american-tweet-predictor
-        image: arthurherbert/american-tweet-predictor:latest
+        image: arthurherbert/american-tweet-predictor:1.0.0
         ports:
         - containerPort: 5003
