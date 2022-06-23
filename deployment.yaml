@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arthurmelo-deployment
+  labels:
+    app: arthurmelo-american-tweet-predictor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: arthurmelo-american-tweet-predictor
+  template:
+    metadata:
+      labels:
+        app: arthurmelo-american-tweet-predictor
+    spec:
+      containers:
+      - name: arthurmelo-american-tweet-predictor
+        image: arthurherbert/american-tweet-predictor:latest
+        ports:
+        - containerPort: 5003
